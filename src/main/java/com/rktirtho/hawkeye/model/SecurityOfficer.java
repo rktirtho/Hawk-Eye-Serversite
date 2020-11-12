@@ -7,7 +7,9 @@ import java.sql.Timestamp;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+@Entity
 public class SecurityOfficer {
+	@Id
 	private int id;
 	private String name;
 	private String email;
@@ -24,6 +26,27 @@ public class SecurityOfficer {
 	}
 	
 	
+	
+	public SecurityOfficer(int id, String name, String email, int orgId) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.email = email;
+		this.orgId = orgId;
+	}
+
+
+	public SecurityOfficer(String name, String email, String username, String password, int orgId) {
+		super();
+		this.name = name;
+		this.email = email;
+		this.username = username;
+		this.password = password;
+		this.orgId = orgId;
+	}
+
+
+
 	public int getId() {
 		return id;
 	}
