@@ -24,6 +24,11 @@ public class SecurityApi {
 	}
 	
 	@GetMapping("api/securityofficers")
+	public List<SecurityOfficer> login(){
+		return securityOffRepo.findAll();
+	}
+	
+	@GetMapping("api/securityofficers")
 	public List<SecurityOfficer> findAll(){
 		return securityOffRepo.findAll();
 	}
