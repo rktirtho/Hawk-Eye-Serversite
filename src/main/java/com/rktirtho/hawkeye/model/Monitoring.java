@@ -5,20 +5,20 @@ import java.sql.Timestamp;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 @Entity
-public class Monitoning {
+public class Monitoring {
 	@Id
 	private int id;
 	private int personId;
 	private String area;
-	private Timestamp timestamp;
+	private Timestamp time;
 	private boolean isPermitted;
 	
 	
-	public Monitoning() {
+	public Monitoring() {
 	}
 
 
-	public Monitoning(int personId, boolean isPermitted) {
+	public Monitoring(int personId, boolean isPermitted) {
 		this.personId = personId;
 		this.isPermitted = isPermitted;
 	}
@@ -36,11 +36,11 @@ public class Monitoning {
 	public void setPersonId(int personId) {
 		this.personId = personId;
 	}
-	public Timestamp getTimestamp() {
-		return timestamp;
+	public Timestamp getTime() {
+		return time;
 	}
-	public void setTimestamp(Timestamp timestamp) {
-		this.timestamp = timestamp;
+	public void setTime(Timestamp timestamp) {
+		this.time = timestamp;
 	}
 	public boolean isPermitted() {
 		return isPermitted;
@@ -61,14 +61,5 @@ public class Monitoning {
 		this.area = area;
 	}
 
-
-	@Override
-	public String toString() {
-		return "Monitoning [id=" + id + ", personId=" + personId + ", timestamp=" + timestamp + ", isPermitted="
-				+ isPermitted + "]";
-	}
-	
-	
-	
 	
 }
