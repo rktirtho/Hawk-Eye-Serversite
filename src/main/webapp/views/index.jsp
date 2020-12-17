@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,16 +7,46 @@
 <title>Hawk Eye : Intelligent Security System</title>
 </head>
 <body>
-<h2>Hawk Eye</h2>
-<h4>The smart Security System</h4>
+	<h2>Hawk Eye</h2>
+	<h4>The Intelligent Security System</h4>
 
-<h5>List of All Organizations</h5>
-<img alt="Rejaul" src="images/2Rejaul.jpg">
+	<h2>Organization API</h2>
+	
+	<ul>
+		<li>
+			<div>
+				<p>All Organization</p>
+				<p class="api-link">api/organizations</p>
+				
+			</div>
+		</li>
+		<li>
+			<div>
+				<p>Organizaation</p>
+				<p class="api-link">api/organization/id</p>
+			</div>
+		</li>
 
-<ul>
-<li><a href="api/organizations">Organizaations</a></li>
-</ul>
+	</ul>
+	
+	<h2>Security Person API</h2>
+	
+	<ul>
+		<li>
+			<div>
+				<p>Organizaations</p>
+				<p class="api-link">api/organizations</p>
+				
+			</div>
+		</li>
+		<li>
+			<div>
+				<p>Organizaation</p>
+				<p class="api-link">api/organization/id</p>
+			</div>
+		</li>
 
-${result }
+	</ul>
+
 </body>
 </html>
