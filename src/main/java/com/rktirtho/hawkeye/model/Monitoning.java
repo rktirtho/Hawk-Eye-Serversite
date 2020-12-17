@@ -9,6 +9,7 @@ public class Monitoning {
 	@Id
 	private int id;
 	private int personId;
+	private String area;
 	private Timestamp timestamp;
 	private boolean isPermitted;
 	
@@ -46,6 +47,18 @@ public class Monitoning {
 	}
 	public void setPermitted(boolean isPermitted) {
 		this.isPermitted = isPermitted;
+	}
+	
+	
+
+
+	public String getArea() {
+		return area;
+	}
+
+
+	public void setArea(String area) {
+		this.area = area;
 	}
 
 

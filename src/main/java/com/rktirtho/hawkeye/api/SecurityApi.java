@@ -14,28 +14,28 @@ import com.rktirtho.hawkeye.repository.SecurityOffRepo;
 @RestController
 public class SecurityApi {
 	
-	@Autowired
-	SecurityOffRepo securityOffRepo;
+//	@Autowired
+//	SecurityOffRepo securityOffRepo;
+//	
 	
+//	@PostMapping
+//	public SecurityOfficer save (SecurityOfficer officer) {
+//		return securityOffRepo.save(officer);
+//	}
 	
-	@PostMapping
-	public SecurityOfficer save (SecurityOfficer officer) {
-		return securityOffRepo.save(officer);
-	}
-	
-	@GetMapping("api/securityofficers")
-	public List<SecurityOfficer> login(){
-		return securityOffRepo.findAll();
-	}
-	
-	@GetMapping("api/securityofficers")
-	public List<SecurityOfficer> findAll(){
-		return securityOffRepo.findAll();
-	}
-	
-	@GetMapping("api/securityofficer/{id}")
-	public SecurityOfficer findOne(@PathVariable("id") int id) {
-		return securityOffRepo.findById(id).orElse(new SecurityOfficer());
-	}
+//	@GetMapping("api/securityofficers")
+//	public List<SecurityOfficer> login(){
+//		return securityOffRepo.findAll();
+//	}
+//	
+//	@GetMapping("api/securityofficers")
+//	public List<SecurityOfficer> findAll(){
+//		return securityOffRepo.findAll();
+//	}
+//	
+//	@GetMapping("api/securityofficer/{id}")
+//	public SecurityOfficer findOne(@PathVariable("id") int id) {
+//		return securityOffRepo.findById(id).orElse(new SecurityOfficer());
+//	}
 
 }

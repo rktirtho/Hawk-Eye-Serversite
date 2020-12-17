@@ -11,6 +11,7 @@
 <h4>The smart Security System</h4>
 
 <h5>List of All Organizations</h5>
+<img alt="Rejaul" src="images/2Rejaul.jpg">
 
 <ul>
 <li><a href="api/organizations">Organizaations</a></li>
