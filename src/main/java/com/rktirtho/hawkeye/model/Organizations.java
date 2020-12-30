@@ -1,20 +1,36 @@
 package com.rktirtho.hawkeye.model;
 
 import java.sql.Timestamp;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "organizations")
 public class Organizations {
 	@Id
-//	@PrimaryKeyJoinColumn
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
+	
 	private String name;
 	private String woner;
 	private String address;
 	private Timestamp regDate;
+	@OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
+	@JoinColumn(name = "id")
+	private List<Permitted> permitteds;
+	
+	
 	
 	
 	public Organizations() {
@@ -51,6 +67,20 @@ public class Organizations {
 	public void setRegDate(Timestamp regDate) {
 		this.regDate = regDate;
 	}
+	
+	
+	
+
+	public List<Permitted> getPermitteds() {
+		return permitteds;
+	}
+
+
+	public void setPermitteds(List<Permitted> permitteds) {
+		this.permitteds = permitteds;
+	}
+
+
 	@Override
 	public String toString() {
 		return "id=" + id + "\tname=" + name + "\twoner=" + woner + "\taddress=" + address + "\tregDate="
