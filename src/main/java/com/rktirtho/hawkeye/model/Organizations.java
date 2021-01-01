@@ -15,6 +15,8 @@ import javax.persistence.OneToMany;
 import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
+
 @Entity
 @Table(name = "organizations")
 public class Organizations {
@@ -26,9 +28,8 @@ public class Organizations {
 	private String woner;
 	private String address;
 	private Timestamp regDate;
-	@OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
-	@JoinColumn(name = "id")
-	private List<Permitted> permitteds;
+
+//	private List<Permitted> permitteds;
 	
 	
 	
@@ -71,14 +72,14 @@ public class Organizations {
 	
 	
 
-	public List<Permitted> getPermitteds() {
-		return permitteds;
-	}
-
-
-	public void setPermitteds(List<Permitted> permitteds) {
-		this.permitteds = permitteds;
-	}
+//	public List<Permitted> getPermitteds() {
+//		return permitteds;
+//	}
+//
+//
+//	public void setPermitteds(List<Permitted> permitteds) {
+//		this.permitteds = permitteds;
+//	}
 
 
 	@Override

@@ -27,9 +27,9 @@ public class SecurityOfficer {
 
 	@Column(name = "password")
 	private String password;
-//
-//	@Column(name = "org_id")
-//	private int orgId;
+
+	@Column(name = "org_id")
+	private int orgId;
 	
 	@Column(name = "is_active")
 	private int isActive;
@@ -40,9 +40,6 @@ public class SecurityOfficer {
 	@Column(name = "joid_date")
 	private Timestamp joidDate;
 
-	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "org_id")
-	private Organizations organizations;
 
 	public SecurityOfficer() {
 	}
@@ -104,13 +101,13 @@ public class SecurityOfficer {
 		this.password = password;
 	}
 
-//	public int getOrgId() {
-//		return orgId;
-//	}
-//
-//	public void setOrgId(int orgId) {
-//		this.orgId = orgId;
-//	}
+	public int getOrgId() {
+		return orgId;
+	}
+
+	public void setOrgId(int orgId) {
+		this.orgId = orgId;
+	}
 
 	public Timestamp getLastExcess() {
 		return lastExcess;
@@ -128,12 +125,12 @@ public class SecurityOfficer {
 		this.joidDate = joidDate;
 	}
 
-	public Organizations getOrganizations() {
-		return organizations;
-	}
-
-	public void setOrganizations(Organizations organizations) {
-		this.organizations = organizations;
-	}
+//	public Organizations getOrganizations() {
+//		return organizations;
+//	}
+//
+//	public void setOrganizations(Organizations organizations) {
+//		this.organizations = organizations;
+//	}
 
 }
