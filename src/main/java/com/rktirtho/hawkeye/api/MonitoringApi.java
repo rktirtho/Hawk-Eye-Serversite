@@ -15,17 +15,17 @@ import com.rktirtho.hawkeye.repository.MonitoringRepo;
 @RequestMapping("api/monitoring")
 public class MonitoringApi {
 	
-//	@Autowired
-//	private MonitoringRepo repo;
+	@Autowired
+	private MonitoringRepo repo;
 	
 //	@GetMapping("all")
 //	public List<Monitoring> getAll(){
 //		return repo.findAll();
 //	}
 //	
-//	@GetMapping("{id}")
-//	public Monitoring getOne(@PathVariable("id")int id) {
-//		return repo.findById(id).orElse(null);
-//	} 
+	@GetMapping("person/{id}")
+	public List<Monitoring> findByPersonId(@PathVariable("id")int id) {
+		return repo.findByPersonId(id);
+	} 
 
 }
