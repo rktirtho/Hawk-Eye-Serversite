@@ -21,6 +21,7 @@ public class Permitted {
 	private String name;
 	private int orgId;
 	private String imageId;
+	private String orgName;
 	private Timestamp regesteredTime;
 //	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 //	@JoinColumn(name = "id")
@@ -76,6 +77,14 @@ public class Permitted {
 	}
 	public void setRegesteredTime(Timestamp regesteredTime) {
 		this.regesteredTime = regesteredTime;
+	}
+
+	public String getOrgName() {
+		return orgName;
+	}
+
+	public void setOrgName(String orgName) {
+		this.orgName = orgName;
 	}
 
 //	public Organizations getOrganizations() {

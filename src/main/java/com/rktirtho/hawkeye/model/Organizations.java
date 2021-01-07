@@ -28,6 +28,7 @@ public class Organizations {
 	private String woner;
 	private String address;
 	private Timestamp regDate;
+	
 
 //	private List<Permitted> permitteds;
 	

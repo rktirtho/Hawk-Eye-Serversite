@@ -2,6 +2,8 @@ package com.rktirtho.hawkeye.dto;
 
 import java.sql.Timestamp;
 
+import javax.persistence.Entity;
+
 public class PermittedDetails {
 	private int id;
 	private String name;
@@ -21,6 +23,19 @@ public class PermittedDetails {
 		this.imageId = imageId;
 		this.orgName = orgName;
 	}
+	
+	
+	
+	public PermittedDetails(int id, String name, int orgId, String imageId, String orgName, Timestamp regesteredTime) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.orgId = orgId;
+		this.imageId = imageId;
+		this.orgName = orgName;
+		this.regesteredTime = regesteredTime;
+	}
+
 	public int getId() {
 		return id;
 	}

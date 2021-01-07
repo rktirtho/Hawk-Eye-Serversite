@@ -10,10 +10,14 @@ import com.rktirtho.hawkeye.model.Permitted;
 
 public interface PermittRepo extends JpaRepository<Permitted, Integer>{
 	
-//	@Query()
-//	List<PermittedDetails> getPermittedWithOrgName();
 	
-	@Query(value = "select permitted.id, permitted.name, permitted.org_id, permitted.image_id, organizations.name as org_name, permitted.regestered_time from permitted join organizations on permitted.org_id = organizations.id", nativeQuery = true)
-	List<Object> getAllPermitteds();
+	List<Permitted> findByOrgId(int id);
+	
+	@Query(value = "select p.id, p.name, p.org_id, p.image_id, o.name as org_name, p.regestered_time from permitted p join organizations o on p.org_id = o.id", nativeQuery = true)
+	List<Permitted> getAllPermitteds();
+	
+	@Query(value = "select * from permitted ", nativeQuery = true)
+	List<Permitted> getAllTest();
+
 
 }

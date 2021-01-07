@@ -24,16 +24,20 @@ public class PermittedApi {
 	
 	@GetMapping("permitteds")
 	public List<Permitted> getAll(){
-		return repo.findAll();
-		
-	}
-	
-	@GetMapping("test")
-	public List<Object> test(){
 		return repo.getAllPermitteds();
-		
 	}
 	
+	@GetMapping("permitteds/org/{id}")
+	public List<Permitted> getAllByOrgId(@PathVariable("id") int id){
+		return repo.findByOrgId(id);
+	}
+	
+	@GetMapping("get")
+	public List<Permitted> get(){
+		return repo.getAllTest();
+		
+	}
+		
 	@GetMapping("permitted/{id}")
 	public Permitted getOne(@PathVariable("id") int id){
 		return repo.findById(id).orElse(null);
