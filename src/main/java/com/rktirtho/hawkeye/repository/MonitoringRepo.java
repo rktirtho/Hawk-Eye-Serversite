@@ -9,5 +9,6 @@ import com.rktirtho.hawkeye.model.Monitoring;
 
 public interface MonitoringRepo extends JpaRepository<Monitoring, Integer>{
 	public List<Monitoring> findByPersonId(int id);
+	public List<Monitoring> findByPersonIdAndIsPermitted(int id, boolean isPermitted);
 
 }

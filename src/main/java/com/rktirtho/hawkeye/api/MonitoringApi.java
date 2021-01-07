@@ -27,5 +27,15 @@ public class MonitoringApi {
 	public List<Monitoring> findByPersonId(@PathVariable("id")int id) {
 		return repo.findByPersonId(id);
 	} 
+	
+	@GetMapping("person/access/auth/{id}")
+	public List<Monitoring> findPersonAuthorizedAccess(@PathVariable("id")int id) {
+		return repo.findByPersonIdAndIsPermitted(id, true);
+	}
+	
+	@GetMapping("person/access/unauth/{id}")
+	public List<Monitoring> findPersonUnauthorizedAccess(@PathVariable("id")int id) {
+		return repo.findByPersonIdAndIsPermitted(id, false);
+	} 
 
 }
