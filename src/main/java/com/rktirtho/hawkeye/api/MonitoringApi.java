@@ -23,6 +23,13 @@ public class MonitoringApi {
 //		return repo.findAll();
 //	}
 //	
+	
+	@GetMapping("all")
+	public List<Monitoring> findAll(@PathVariable("id")int id) {
+		return repo.findAll();
+	} 
+	
+	
 	@GetMapping("person/{id}")
 	public List<Monitoring> findByPersonId(@PathVariable("id")int id) {
 		return repo.findByPersonId(id);
