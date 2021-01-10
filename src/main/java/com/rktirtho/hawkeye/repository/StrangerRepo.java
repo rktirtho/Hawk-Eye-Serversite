@@ -7,3 +7,4 @@ import com.rktirtho.hawkeye.model.Stranger;
 public interface StrangerRepo extends JpaRepository<Stranger, Integer>{
 
 }
+

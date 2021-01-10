@@ -45,6 +45,13 @@ public class OrganizationAPI {
 		return orgRepo.findById(id).orElse(new Organizations());
 		
 	}
+	
+	@GetMapping("organization/count")
+	public Long count() {
+		return orgRepo.count();
+		
+	}
+	
 	// To Do
 //	@PostMapping("api/addorganization")
 //	public Organizations addOrganization(@ModelAttribute Organizations org) {
