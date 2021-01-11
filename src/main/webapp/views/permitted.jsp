@@ -38,20 +38,75 @@
 				<div class="jumbotron myWidth">
 					<div class="wraper">
 						<div class="leftSide">
-							<p class="lead">Get all Organizations</p>
+							<p class="lead">Get all Permitted Person</p>
 							<p>
 								<input type="text" name="demo" class="myInput"
-									value="http://localhost:8080/api/organizations">
+									value="http://localhost:8080/api/permitteds">
 							</p>
 						</div>
 						<div class="rightSide">
-							<a href="http://localhost:8080/api/organizations" target="_blank">
+							<a href="http://localhost:8080/api/permitteds" target="_blank">
 								<button style="margin-top: 46px; padding: 8px;">copy</button>
 							</a>
 						</div>
 						<div style="clear: both;"></div>
 					</div>
 				</div>
+				
+				<div class="jumbotron myWidth">
+					<div class="wraper">
+						<div class="leftSide">
+							<p class="lead">Get all Permitted Person of a Organization by its Id</p>
+							<p>
+								<input type="text" name="demo" class="myInput"
+									value="http://localhost:8080/api/permitteds/org/{id}">
+							</p>
+						</div>
+						<div class="rightSide">
+							<a href="http://localhost:8080/api/permitteds//org/{1}" target="_blank">
+								<button style="margin-top: 46px; padding: 8px;">copy</button>
+							</a>
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+				</div>
+				
+				<div class="jumbotron myWidth">
+					<div class="wraper">
+						<div class="leftSide">
+							<p class="lead">Get all Permitted Person</p>
+							<p>
+								<input type="text" name="demo" class="myInput"
+									value="http://localhost:8080/api/permitted/{id}">
+							</p>
+						</div>
+						<div class="rightSide">
+							<a href="http://localhost:8080/api/permitted/4001" target="_blank">
+								<button style="margin-top: 46px; padding: 8px;">copy</button>
+							</a>
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+				</div>
+				
+				<div class="jumbotron myWidth">
+					<div class="wraper">
+						<div class="leftSide">
+							<p class="lead">Get all Permitted Person</p>
+							<p>
+								<input type="text" name="demo" class="myInput"
+									value="http://localhost:8080/api/permitteds">
+							</p>
+						</div>
+						<div class="rightSide">
+							<a href="http://localhost:8080/api/permitteds" target="_blank">
+								<button style="margin-top: 46px; padding: 8px;">copy</button>
+							</a>
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+				</div>
+				
 			</div>
 		</div>
 	</div>

@@ -38,20 +38,39 @@
 				<div class="jumbotron myWidth">
 					<div class="wraper">
 						<div class="leftSide">
-							<p class="lead">Get all Organizations</p>
+							<p class="lead">Get all Security Officers</p>
 							<p>
 								<input type="text" name="demo" class="myInput"
-									value="http://localhost:8080/api/organizations">
+									value="http://localhost:8080/api/securityofficers">
 							</p>
 						</div>
 						<div class="rightSide">
-							<a href="http://localhost:8080/api/organizations" target="_blank">
+							<a href="http://localhost:8080/api/securityofficers" target="_blank">
 								<button style="margin-top: 46px; padding: 8px;">copy</button>
 							</a>
 						</div>
 						<div style="clear: both;"></div>
 					</div>
 				</div>
+				
+				<div class="jumbotron myWidth">
+					<div class="wraper">
+						<div class="leftSide">
+							<p class="lead">Get all Security Officers</p>
+							<p>
+								<input type="text" name="demo" class="myInput"
+									value="http://localhost:8080/api/securityofficer/{id}">
+							</p>
+						</div>
+						<div class="rightSide">
+							<a href="http://localhost:8080/api/securityofficer/1" target="_blank">
+								<button style="margin-top: 46px; padding: 8px;">copy</button>
+							</a>
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+				</div>
+				
 			</div>
 		</div>
 	</div>
