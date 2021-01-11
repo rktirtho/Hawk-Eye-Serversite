@@ -35,6 +35,7 @@
 				</div>
 			</div>
 			<div class="col col-md-9">
+			
 				<div class="jumbotron myWidth">
 					<div class="wraper">
 						<div class="leftSide">
@@ -52,6 +53,63 @@
 						<div style="clear: both;"></div>
 					</div>
 				</div>
+				
+				<div class="jumbotron myWidth">
+					<div class="wraper">
+						<div class="leftSide">
+							<p class="lead">Get Organization by Organization ID</p>
+							<p>
+								<input type="text" name="demo" class="myInput"
+									value="http://localhost:8080/api/organization/{id}">
+							</p>
+						</div>
+						<div class="rightSide">
+							<a href="http://localhost:8080/api/organization/4001" target="_blank">
+								<button style="margin-top: 46px; padding: 8px;">copy</button>
+							</a>
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+				</div>
+				
+				<div class="jumbotron myWidth">
+					<div class="wraper">
+						<div class="leftSide">
+							<p class="lead">Get Organization by Organization Name</p>
+							<p>
+								<input type="text" name="demo" class="myInput"
+									value="http://localhost:8080/api/organizations/{name}">
+							</p>
+						</div>
+						<div class="rightSide">
+							<a href="http://localhost:8080/api/organization/hawk eye" target="_blank">
+								<button style="margin-top: 46px; padding: 8px;">Open</button>
+							</a>
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+				</div>
+				
+				<div class="jumbotron myWidth">
+					<div class="wraper">
+						<div class="leftSide">
+							<p class="lead">Count Number of Organizations</p>
+							<p>
+								<input type="text" name="demo" class="myInput"
+									value="http://localhost:8080/api/organizations/count">
+							</p>
+						</div>
+						<div class="rightSide">
+							<a href="http://localhost:8080/api/organization/count" target="_blank">
+								<button style="margin-top: 46px; padding: 8px;">copy</button>
+							</a>
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+				</div>
+				
+				
+				
 			</div>
 		</div>
 	</div>
