@@ -5,20 +5,20 @@
 <head>
 <meta charset="UTF-8">
 <title>Hawk Eye : Intelligent Security System</title>
-<link rel="stylesheet" href="lib/bootstrap-4/css/bootstrap.css">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/lib/bootstrap-4/css/bootstrap.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
 	<div class="container-fluid">
-	<h2 class="text-center py-3">Organization Api Link</h2>
+	<h2 class="text-center py-3">Permitted Api Link</h2>
 		<div class="row">
 			<div class="col col-md-3">
 				<div class="nav flex-column nav-pills" id="v-pills-tab"
 					role="tablist" aria-orientation="vertical">
-					<a class="nav-link active" id="v-pills-home-tab" data-toggle="pill"
+					<a class="nav-link " id="v-pills-home-tab" data-toggle="pill"
 						href="${pageContext.request.contextPath}/" role="tab" aria-controls="v-pills-home"
 						aria-selected="true">Organization</a> 
-					<a class="nav-link "
+					<a class="nav-link active"
 						id="v-pills-profile-tab" data-toggle="pill"
 						href="${pageContext.request.contextPath}/api/permitted" role="tab" aria-controls="v-pills-profile"
 						aria-selected="false">Permitted</a> 
@@ -55,7 +55,6 @@
 			</div>
 		</div>
 	</div>
-
 
 	<script src="js/jquery.js"></script>
 	<script src="js/bootstrap.js"></script>
