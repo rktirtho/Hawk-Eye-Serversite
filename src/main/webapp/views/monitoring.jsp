@@ -38,20 +38,95 @@
 				<div class="jumbotron myWidth">
 					<div class="wraper">
 						<div class="leftSide">
-							<p class="lead">Get all Organizations</p>
+							<p class="lead">Get all Monitoring data</p>
 							<p>
 								<input type="text" name="demo" class="myInput"
-									value="http://localhost:8080/api/organizations">
+									value="http://localhost:8080/api/monitoring/all">
 							</p>
 						</div>
 						<div class="rightSide">
-							<a href="http://localhost:8080/api/organizations" target="_blank">
-								<button style="margin-top: 46px; padding: 8px;">copy</button>
+							<a href="http://localhost:8080/api/monitoring/all" target="_blank">
+								<button style="margin-top: 46px; padding: 8px;">Open</button>
 							</a>
 						</div>
 						<div style="clear: both;"></div>
 					</div>
 				</div>
+				
+				<div class="jumbotron myWidth">
+					<div class="wraper">
+						<div class="leftSide">
+							<p class="lead">Get all Monitoring data by Person ID</p>
+							<p>
+								<input type="text" name="demo" class="myInput"
+									value="http://localhost:8080/api/monitoring/person/{id}">
+							</p>
+						</div>
+						<div class="rightSide">
+							<a href="http://localhost:8080/api/monitoring/person/4001" target="_blank">
+								<button style="margin-top: 46px; padding: 8px;">Open</button>
+							</a>
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+				</div>
+				
+				<div class="jumbotron myWidth">
+					<div class="wraper">
+						<div class="leftSide">
+							<p class="lead">Get all Authorized access of a person by Person Id</p>
+							<p>
+								<input type="text" name="demo" class="myInput"
+									value="http://localhost:8080/api/monitoring/person/access/auth/{id}">
+							</p>
+						</div>
+						<div class="rightSide">
+							<a href="http://localhost:8080/api/monitoring/person/access/auth/4001" target="_blank">
+								<button style="margin-top: 46px; padding: 8px;">Open</button>
+							</a>
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+				</div>
+				
+				<div class="jumbotron myWidth">
+					<div class="wraper">
+						<div class="leftSide">
+							<p class="lead">Get all Unauthorized access of a person by Person Id</p>
+							<p>
+								<input type="text" name="demo" class="myInput"
+									value="http://localhost:8080/api/monitoring/person/access/unauth/{id}">
+							</p>
+						</div>
+						<div class="rightSide">
+							<a href="http://localhost:8080/api/monitoring/person/access/unauth/4001" target="_blank">
+								<button style="margin-top: 46px; padding: 8px;">Open</button>
+							</a>
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+				</div>
+				
+				<div class="jumbotron myWidth">
+					<div class="wraper">
+						<div class="leftSide">
+							<p class="lead">Get all Monitoring data</p>
+							<p>
+								<input type="text" name="demo" class="myInput"
+									value="http://localhost:8080/api/monitoring">
+							</p>
+						</div>
+						<div class="rightSide">
+							<a href="http://localhost:8080/api/organizations" target="_blank">
+								<button style="margin-top: 46px; padding: 8px;">Open</button>
+							</a>
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+				</div>
+				
+				
+				
 			</div>
 		</div>
 	</div>
