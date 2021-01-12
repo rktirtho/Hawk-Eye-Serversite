@@ -57,7 +57,7 @@ public class MonitoringApi {
 	}
 	@GetMapping("yesterday")
 	public List<Permitted> findYesterday() {
-		Iterable<Integer> ids = repo.getToDayAccessPersonId();
+		Iterable<Integer> ids = repo.getYesterdayAccessPersonId()();
 		return permittRepo.findAllById(ids);
 	}
 

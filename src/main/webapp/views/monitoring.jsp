@@ -56,6 +56,42 @@
 				<div class="jumbotron myWidth">
 					<div class="wraper">
 						<div class="leftSide">
+							<p class="lead">Get Today access</p>
+							<p>
+								<input type="text" name="demo" class="myInput"
+									value="http://localhost:8080/api/monitoring/today">
+							</p>
+						</div>
+						<div class="rightSide">
+							<a href="http://localhost:8080/api/monitoring/today" target="_blank">
+								<button style="margin-top: 46px; padding: 8px;">Open</button>
+							</a>
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+				</div>
+				
+				<div class="jumbotron myWidth">
+					<div class="wraper">
+						<div class="leftSide">
+							<p class="lead">Get Yesterday access</p>
+							<p>
+								<input type="text" name="demo" class="myInput"
+									value="http://localhost:8080/api/monitoring/yesterday">
+							</p>
+						</div>
+						<div class="rightSide">
+							<a href="http://localhost:8080/api/monitoring/yesterday" target="_blank">
+								<button style="margin-top: 46px; padding: 8px;">Open</button>
+							</a>
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+				</div>
+				
+				<div class="jumbotron myWidth">
+					<div class="wraper">
+						<div class="leftSide">
 							<p class="lead">Get all Monitoring data by Person ID</p>
 							<p>
 								<input type="text" name="demo" class="myInput"
