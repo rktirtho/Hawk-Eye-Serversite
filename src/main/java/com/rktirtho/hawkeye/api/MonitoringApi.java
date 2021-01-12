@@ -17,52 +17,48 @@ import com.rktirtho.hawkeye.repository.PermittRepo;
 @RestController
 @RequestMapping("api/monitoring")
 public class MonitoringApi {
-	
+
 	@Autowired
 	private MonitoringRepo repo;
-	
+
 	@Autowired
 	PermittRepo permittRepo;
 
-	
 //	@GetMapping("all")
 //	public List<Monitoring> getAll(){
 //		return repo.findAll();
 //	}
 //	
-	
+
 	@GetMapping("all")
-	public List<Monitoring> findAll(@PathVariable("id")int id) {
+	public List<Monitoring> findAll(@PathVariable("id") int id) {
 		return repo.findAll();
-	} 
-	
-	
-	
+	}
+
 	@GetMapping("person/{id}")
-	public List<Monitoring> findByPersonId(@PathVariable("id")int id) {
+	public List<Monitoring> findByPersonId(@PathVariable("id") int id) {
 		return repo.findByPersonId(id);
-	} 
-	
+	}
+
 	@GetMapping("person/access/auth/{id}")
-	public List<Monitoring> findPersonAuthorizedAccess(@PathVariable("id")int id) {
+	public List<Monitoring> findPersonAuthorizedAccess(@PathVariable("id") int id) {
 		return repo.findByPersonIdAndIsPermitted(id, true);
 	}
-	
+
 	@GetMapping("person/access/unauth/{id}")
-	public List<Monitoring> findPersonUnauthorizedAccess(@PathVariable("id")int id) {
+	public List<Monitoring> findPersonUnauthorizedAccess(@PathVariable("id") int id) {
 		return repo.findByPersonIdAndIsPermitted(id, false);
-	} 
-	
+	}
+
 	@GetMapping("today")
 	public List<Permitted> findToday() {
-		List<Permitted> permitteds = new ArrayList<Permitted>();
-		
-		Iterable<Integer> ids =repo.getToDayAccessPersonId();
-//		for(int i=0; i<ids.length;i++) {
-			return permittRepo.findAllById(ids);
-//		
-		
-		
+		Iterable<Integer> ids = repo.getToDayAccessPersonId();
+		return permittRepo.findAllById(ids);
+	}
+	@GetMapping("yesterday")
+	public List<Permitted> findYesterday() {
+		Iterable<Integer> ids = repo.getToDayAccessPersonId();
+		return permittRepo.findAllById(ids);
 	}
 
 }
