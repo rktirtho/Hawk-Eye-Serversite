@@ -14,5 +14,8 @@ public interface MonitoringRepo extends JpaRepository<Monitoring, Integer>{
 	
 	@Query(value = "SELECT distinct person_id FROM monitoring where DATE(`time`) = CURDATE()", nativeQuery = true)
 	public Iterable<Integer> getToDayAccessPersonId();
+	
+	@Query(value = "SELECT distinct person_id FROM monitoring where DATE(`time`) = CURDATE()-1", nativeQuery = true)
+	public Iterable<Integer> getYesterdayAccessPersonId();
 
 }
