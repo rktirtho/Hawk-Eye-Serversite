@@ -1,5 +1,6 @@
 package com.rktirtho.hawkeye.api;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.rktirtho.hawkeye.model.Monitoring;
+import com.rktirtho.hawkeye.model.Permitted;
 import com.rktirtho.hawkeye.repository.MonitoringRepo;
+import com.rktirtho.hawkeye.repository.PermittRepo;
 
 @RestController
 @RequestMapping("api/monitoring")
@@ -17,6 +20,10 @@ public class MonitoringApi {
 	
 	@Autowired
 	private MonitoringRepo repo;
+	
+	@Autowired
+	PermittRepo permittRepo;
+
 	
 //	@GetMapping("all")
 //	public List<Monitoring> getAll(){
@@ -28,6 +35,7 @@ public class MonitoringApi {
 	public List<Monitoring> findAll(@PathVariable("id")int id) {
 		return repo.findAll();
 	} 
+	
 	
 	
 	@GetMapping("person/{id}")
@@ -44,5 +52,17 @@ public class MonitoringApi {
 	public List<Monitoring> findPersonUnauthorizedAccess(@PathVariable("id")int id) {
 		return repo.findByPersonIdAndIsPermitted(id, false);
 	} 
+	
+	@GetMapping("today")
+	public List<Permitted> findToday() {
+		List<Permitted> permitteds = new ArrayList<Permitted>();
+		
+		Iterable<Integer> ids =repo.getToDayAccessPersonId();
+//		for(int i=0; i<ids.length;i++) {
+			return permittRepo.findAllById(ids);
+//		
+		
+		
+	}
 
 }
