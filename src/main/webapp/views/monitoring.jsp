@@ -74,6 +74,25 @@
 				<div class="jumbotron myWidth">
 					<div class="wraper">
 						<div class="leftSide">
+							<p class="lead">Get Today access of a employee by his/her if</p>
+							<p>
+								<input type="text" name="demo" class="myInput"
+									value="http://localhost:8080/api/monitoring/person/access/today/{id}">
+							</p>
+						</div>
+						<div class="rightSide">
+							<a href="http://localhost:8080/api/monitoring/person/access/today/4001" target="_blank">
+								<button style="margin-top: 46px; padding: 8px;">Open</button>
+							</a>
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+				</div>
+				
+				
+				<div class="jumbotron myWidth">
+					<div class="wraper">
+						<div class="leftSide">
 							<p class="lead">Get Yesterday access</p>
 							<p>
 								<input type="text" name="demo" class="myInput"
@@ -82,6 +101,24 @@
 						</div>
 						<div class="rightSide">
 							<a href="http://localhost:8080/api/monitoring/yesterday" target="_blank">
+								<button style="margin-top: 46px; padding: 8px;">Open</button>
+							</a>
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+				</div>
+				
+				<div class="jumbotron myWidth">
+					<div class="wraper">
+						<div class="leftSide">
+							<p class="lead">Get Yesterday access of a employee by his/her id</p>
+							<p>
+								<input type="text" name="demo" class="myInput"
+									value="http://localhost:8080/api/monitoring/person/access/yesterday/{id}">
+							</p>
+						</div>
+						<div class="rightSide">
+							<a href="http://localhost:8080/api/monitoring/person/access/yesterday/4001" target="_blank">
 								<button style="margin-top: 46px; padding: 8px;">Open</button>
 							</a>
 						</div>

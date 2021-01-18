@@ -15,13 +15,24 @@ public interface MonitoringRepo extends JpaRepository<Monitoring, Integer>{
 	@Query(value = "SELECT distinct person_id FROM monitoring where DATE(`time`) = CURDATE()", nativeQuery = true)
 	public Iterable<Integer> getToDayAccessPersonId();
 	
+	@Query(value = "SELECT * FROM monitoring where person_id=?1 and DATE(`time`) = CURDATE()", nativeQuery = true)
+	public List<Monitoring> getToDayAccessByPersonId(int id);
+	
 	@Query(value = "SELECT distinct person_id FROM monitoring where DATE(`time`) = CURDATE()-1", nativeQuery = true)
 	public Iterable<Integer> getYesterdayAccessPersonId();
+	
+	@Query(value = "SELECT * FROM monitoring where person_id=?1 and DATE(`time`) = CURDATE()-1", nativeQuery = true)
+	public List<Monitoring> getYesterdayAccessByPersonId(int id);
 	
 	@Query(value = "SELECT distinct person_id FROM monitoring where is_permitted=1", nativeQuery = true)
 	public Iterable<Integer> getAuthorizedAccessPerson();
 	
 	@Query(value = "SELECT distinct person_id FROM monitoring where is_permitted=0", nativeQuery = true)
 	public Iterable<Integer> getUnauthorizedAccessPerson();
+	
+	@Query(value = "SELECT * FROM monitoring where person_id=?1", nativeQuery = true)
+	public List<Monitoring> getAccessByPersonId(int id);
+	
+	
 
 }
