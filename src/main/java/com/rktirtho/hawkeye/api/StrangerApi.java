@@ -23,6 +23,7 @@ public class StrangerApi {
 		return repo.findAll();
 	}
 	
+	@GetMapping("{id}")
 	public Stranger findById(@PathVariable("id") int id) {
 		return repo.findById(id).orElse(null);
 	}
