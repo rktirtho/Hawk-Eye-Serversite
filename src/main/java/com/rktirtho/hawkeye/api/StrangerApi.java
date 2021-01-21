@@ -29,7 +29,11 @@ public class StrangerApi {
 	}
 	
 	
-	
+	@GetMapping("count")
+	public Long count() {
+		return repo.count();
+		
+	}
 	
 
 }

@@ -43,5 +43,10 @@ public class PermittedApi {
 		return repo.findById(id).orElse(null);
 		
 	}
+	
+	@GetMapping("permitted/count")
+	public Long count() {
+		return repo.count();
+	}
 
 }
