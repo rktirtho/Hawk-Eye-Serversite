@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Component;
 
 import com.rktirtho.hawkeye.model.Monitoring;
+import com.rktirtho.hawkeye.model.Stranger;
 
 public interface MonitoringRepo extends JpaRepository<Monitoring, Integer>{
 	public List<Monitoring> findByPersonId(int id);
@@ -32,6 +33,14 @@ public interface MonitoringRepo extends JpaRepository<Monitoring, Integer>{
 	
 	@Query(value = "SELECT * FROM monitoring where person_id=?1", nativeQuery = true)
 	public List<Monitoring> getAccessByPersonId(int id);
+	
+	
+//	================================= Stranger Monitoring ====================================//
+	
+	@Query(value = "select * from monitoring where person_id=?1 and is_permitted=-1",nativeQuery = true)
+	public Stranger getStrangerById(int id);
+	
+	
 	
 	
 

@@ -11,7 +11,8 @@ public class Monitoring {
 	private int personId;
 	private String area;
 	private Timestamp time;
-	private boolean isPermitted;
+	
+	private boolean isPermitted; // -1 for strangers, 0 for unauthorized access, 1 for authorized access
 	
 	
 	public Monitoring() {

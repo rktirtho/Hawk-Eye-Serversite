@@ -41,7 +41,7 @@ public class Stranger {
 		return visited;
 	}
 	public void setVisited(int visited) {
-		this.visited = visited;
+		this.visited = 0;
 	}
 	
 	
