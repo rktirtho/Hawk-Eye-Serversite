@@ -9,12 +9,11 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "stranger_monitor")
-public class StrangerMonitoring {
+public class StrangerMonitor {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
-	private String stId;
+	private int stId;
 	private String area;
 	private Timestamp time;
 	
@@ -24,10 +23,10 @@ public class StrangerMonitoring {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getStId() {
+	public int getStId() {
 		return stId;
 	}
-	public void setStId(String stId) {
+	public void setStId(int stId) {
 		this.stId = stId;
 	}
 	public String getArea() {

@@ -37,9 +37,9 @@ public interface MonitoringRepo extends JpaRepository<Monitoring, Integer>{
 	
 //	================================= Stranger Monitoring ====================================//
 	
-	@Query(value = "select * from monitoring where person_id=?1 and is_permitted=-1",nativeQuery = true)
-	public Stranger getStrangerById(int id);
-	
+//	@Query(value = "select * from monitoring where person_id=?1 and is_permitted=-1",nativeQuery = true)
+//	public Stranger getStrangerById(int id);
+//	
 	
 	
 	
