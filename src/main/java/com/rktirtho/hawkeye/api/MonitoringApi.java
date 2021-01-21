@@ -91,5 +91,8 @@ public class MonitoringApi {
 		Iterable<Integer> ids = repo.getUnauthorizedAccessPerson();
 		return permittRepo.findAllById(ids);
 	}
+	
+	
+
 
 }

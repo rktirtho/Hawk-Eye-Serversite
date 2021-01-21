@@ -3,15 +3,21 @@ package com.rktirtho.hawkeye.model;
 import java.sql.Timestamp;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "stranger_monitor")
 public class StrangerMonitoring {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	private String stId;
 	private String area;
 	private Timestamp time;
+	
 	public int getId() {
 		return id;
 	}
