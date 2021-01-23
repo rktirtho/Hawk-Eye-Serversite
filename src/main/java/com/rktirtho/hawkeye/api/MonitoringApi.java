@@ -91,7 +91,10 @@ public class MonitoringApi {
 		Iterable<Integer> ids = repo.getUnauthorizedAccessPerson();
 		return permittRepo.findAllById(ids);
 	}
-	
+	@GetMapping("employee/today")
+	public Long getAccessByStId(){
+		return repo.countTodayEmployee();
+	}
 	
 
 

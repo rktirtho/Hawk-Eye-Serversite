@@ -34,6 +34,10 @@ public interface MonitoringRepo extends JpaRepository<Monitoring, Integer>{
 	@Query(value = "SELECT * FROM monitoring where person_id=?1", nativeQuery = true)
 	public List<Monitoring> getAccessByPersonId(int id);
 	
+	@Query(value = "SELECT count(distinct person_id) FROM monitoring where area= '1st Floor' and  DATE(`time`) = CURDATE()"
+			, nativeQuery = true)
+	public Long countTodayEmployee();
+	
 	
 //	================================= Stranger Monitoring ====================================//
 	
