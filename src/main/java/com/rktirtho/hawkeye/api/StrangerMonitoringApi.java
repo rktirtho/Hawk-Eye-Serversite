@@ -34,6 +34,11 @@ public class StrangerMonitoringApi {
 		return moniRepo.findAll();
 	}
 	
+	@GetMapping("monitoring/stranger/today")
+	public Long getAccessByStId(){
+		return moniRepo.countTodayStrangers();
+	}
+	
 	
 
 }

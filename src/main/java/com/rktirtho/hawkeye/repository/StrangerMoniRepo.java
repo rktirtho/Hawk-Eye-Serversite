@@ -17,4 +17,8 @@ public interface StrangerMoniRepo extends JpaRepository<StrangerMonitor, Integer
 	
 	@Query(value = "SELECT distinct st_id FROM stranger_monitor", nativeQuery  = true)
 	public Iterable<Integer> getStrangerId();
+	
+	@Query(value = "SELECT count(distinct st_id) FROM stranger_monitor where area= '1st Floor' and  DATE(`time`) = CURDATE()"
+			, nativeQuery = true)
+	public Long countTodayStrangers();
 }
