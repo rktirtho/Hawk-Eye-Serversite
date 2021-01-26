@@ -33,7 +33,7 @@ public class StrangerMonitoringApi {
 	
 	@GetMapping("monitoring/stranger/{id}")
 	public List<StrangerMonitor> getAccessByStId(@PathVariable("id") int id){
-		return moniRepo.findAll();
+		return moniRepo.findByStId(id);
 	}
 	
 	@GetMapping("monitoring/stranger/today")
