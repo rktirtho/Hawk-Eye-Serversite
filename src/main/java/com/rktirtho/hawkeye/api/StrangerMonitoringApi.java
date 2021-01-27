@@ -1,5 +1,6 @@
 package com.rktirtho.hawkeye.api;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,9 +27,15 @@ public class StrangerMonitoringApi {
 	
 	@GetMapping("monitoring/strangers")
 	public List<Stranger> getAll(){
-		Iterable<Integer> ids = moniRepo.getStrangerId();
 		
-		return strangerRepo.findAllById(ids);
+		Iterable<Integer> ids = moniRepo.getStrangerId();
+		List<Stranger> strangersret = new ArrayList<Stranger>();
+		List<Stranger> strangers = strangerRepo.findAllById(ids);
+		for (Stranger stranger : strangers) {
+			stranger.setVisited(moniRepo.getStrangerVisited(stranger.getId()));
+			strangersret.add(stranger);
+		}
+		return strangersret;
 	}
 	
 	@GetMapping("monitoring/stranger/{id}")
